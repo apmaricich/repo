@@ -1,0 +1,90 @@
+{
+  "config" : {
+    "lists" : [
+      "backlogTags",
+      "pinTags",
+      "command"
+    ],
+    "tagDisplayLimit" : 0,
+    "sort" : "completed"
+  },
+  "tasks" : [
+    {
+      "completedDate" : 1794492637.909935,
+      "createdDate" : 1794492474.258209,
+      "id" : 1,
+      "tags" : [
+        "#feature"
+      ],
+      "description" : "Create Go module, directory layout, and build configuration for the repo CLI tool",
+      "title" : "Initialize repo project structure",
+      "completed" : true
+    },
+    {
+      "id" : 2,
+      "tags" : [
+        "#feature"
+      ],
+      "description" : "Load global config from ~\/.config\/repo\/config.json with JSON parsing and validation",
+      "completed" : true,
+      "completedDate" : 1794492713.680367,
+      "createdDate" : 1794492474.26351,
+      "title" : "Implement core config loading"
+    },
+    {
+      "id" : 3,
+      "completed" : true,
+      "createdDate" : 1794492474.269542,
+      "completedDate" : 1794492823.380461,
+      "title" : "Implement two-level config overlay",
+      "description" : "Walk up from CWD to find .repo.json, merge over global config (project wins)",
+      "tags" : [
+        "#feature"
+      ]
+    },
+    {
+      "tags" : [
+        "#feature"
+      ],
+      "id" : 4,
+      "completedDate" : 1794492885.41381,
+      "title" : "Implement command dispatch",
+      "createdDate" : 1794492474.274641,
+      "completed" : true,
+      "description" : "Parse repo <subcommand> [args], look up script config, execute command with os\/exec"
+    },
+    {
+      "title" : "Implement template substitution",
+      "tags" : [
+        "#feature"
+      ],
+      "completed" : true,
+      "description" : "Replace {name}, {file}, etc. placeholders in script args with provided values",
+      "createdDate" : 1794492474.2803121,
+      "id" : 5,
+      "completedDate" : 1794492948.1878681
+    },
+    {
+      "tags" : [
+        "#feature"
+      ],
+      "completed" : true,
+      "createdDate" : 1794492474.2852678,
+      "completedDate" : 1794492956.4857709,
+      "description" : "List available subcommands from config when no args or unknown command given",
+      "title" : "Implement help and usage output",
+      "id" : 6
+    },
+    {
+      "completed" : true,
+      "id" : 7,
+      "completedDate" : 1794492993.7505798,
+      "tags" : [
+        "#feature"
+      ],
+      "description" : "Verify end-to-end: repo goto, repo find, project override, template args",
+      "title" : "Test full workflow",
+      "createdDate" : 1794492474.2895479
+    }
+  ]
+}
