@@ -25,6 +25,12 @@ func main() {
 	subcommand := args[0]
 	remainingArgs := args[1:]
 
+	// Handle --help flag
+	if subcommand == "--help" || subcommand == "-h" {
+		printHelp(os.Stdout, config)
+		os.Exit(0)
+	}
+
 	script, ok := config.Scripts[subcommand]
 	if !ok {
 		fmt.Fprintf(os.Stderr, "error: unknown subcommand: %s\n\n", subcommand)
