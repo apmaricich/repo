@@ -1,90 +1,123 @@
 {
-  "config" : {
-    "lists" : [
-      "backlogTags",
-      "pinTags",
-      "command"
-    ],
-    "tagDisplayLimit" : 0,
-    "sort" : "completed"
-  },
   "tasks" : [
     {
       "completedDate" : 1794492637.909935,
-      "createdDate" : 1794492474.258209,
       "id" : 1,
+      "createdDate" : 1794492474.258209,
+      "description" : "Create Go module, directory layout, and build configuration for the repo CLI tool",
       "tags" : [
         "#feature"
       ],
-      "description" : "Create Go module, directory layout, and build configuration for the repo CLI tool",
-      "title" : "Initialize repo project structure",
-      "completed" : true
+      "completed" : true,
+      "title" : "Initialize repo project structure"
     },
     {
+      "completedDate" : 1794492713.680367,
+      "title" : "Implement core config loading",
       "id" : 2,
       "tags" : [
         "#feature"
       ],
       "description" : "Load global config from ~\/.config\/repo\/config.json with JSON parsing and validation",
       "completed" : true,
-      "completedDate" : 1794492713.680367,
-      "createdDate" : 1794492474.26351,
-      "title" : "Implement core config loading"
+      "createdDate" : 1794492474.26351
     },
     {
-      "id" : 3,
-      "completed" : true,
       "createdDate" : 1794492474.269542,
-      "completedDate" : 1794492823.380461,
-      "title" : "Implement two-level config overlay",
+      "completed" : true,
       "description" : "Walk up from CWD to find .repo.json, merge over global config (project wins)",
-      "tags" : [
-        "#feature"
-      ]
-    },
-    {
+      "id" : 3,
       "tags" : [
         "#feature"
       ],
-      "id" : 4,
-      "completedDate" : 1794492885.41381,
-      "title" : "Implement command dispatch",
+      "completedDate" : 1794492823.380461,
+      "title" : "Implement two-level config overlay"
+    },
+    {
       "createdDate" : 1794492474.274641,
-      "completed" : true,
-      "description" : "Parse repo <subcommand> [args], look up script config, execute command with os\/exec"
-    },
-    {
-      "title" : "Implement template substitution",
       "tags" : [
         "#feature"
       ],
+      "title" : "Implement command dispatch",
+      "description" : "Parse repo <subcommand> [args], look up script config, execute command with os\/exec",
+      "completedDate" : 1794492885.41381,
       "completed" : true,
-      "description" : "Replace {name}, {file}, etc. placeholders in script args with provided values",
-      "createdDate" : 1794492474.2803121,
-      "id" : 5,
-      "completedDate" : 1794492948.1878681
+      "id" : 4
     },
     {
+      "completedDate" : 1794492948.1878681,
+      "completed" : true,
+      "id" : 5,
+      "tags" : [
+        "#feature"
+      ],
+      "createdDate" : 1794492474.2803121,
+      "title" : "Implement template substitution",
+      "description" : "Replace {name}, {file}, etc. placeholders in script args with provided values"
+    },
+    {
+      "description" : "List available subcommands from config when no args or unknown command given",
+      "completedDate" : 1794492956.4857709,
+      "id" : 6,
       "tags" : [
         "#feature"
       ],
       "completed" : true,
       "createdDate" : 1794492474.2852678,
-      "completedDate" : 1794492956.4857709,
-      "description" : "List available subcommands from config when no args or unknown command given",
-      "title" : "Implement help and usage output",
-      "id" : 6
+      "title" : "Implement help and usage output"
     },
     {
-      "completed" : true,
-      "id" : 7,
       "completedDate" : 1794492993.7505798,
+      "completed" : true,
       "tags" : [
         "#feature"
       ],
       "description" : "Verify end-to-end: repo goto, repo find, project override, template args",
       "title" : "Test full workflow",
+      "id" : 7,
       "createdDate" : 1794492474.2895479
+    },
+    {
+      "completedDate" : 1794594343.346554,
+      "description" : "Create \/Users\/apmaricich\/.config\/repo\/scripts\/push.sh that detects current git branch with git rev-parse --abbrev-ref HEAD, validates it's not detached HEAD, and pushes to origin using git push origin {branch}. Exit code 0 on success, non-zero on failure.",
+      "tags" : [
+        "#push"
+      ],
+      "title" : "Create push.sh shell script",
+      "createdDate" : 1794594289.5720181,
+      "id" : 8,
+      "completed" : true
+    },
+    {
+      "completed" : false,
+      "tags" : [
+        "#push"
+      ],
+      "title" : "Test repo push end-to-end",
+      "description" : "Build the repo binary with make build, then test repo push in a test git repository. Verify it correctly detects the current branch and executes git push origin {branch}. Test edge case of detached HEAD state.",
+      "id" : 9,
+      "createdDate" : 1794594289.57727
+    },
+    {
+      "title" : "Add push entry to global config",
+      "completed" : true,
+      "description" : "Add push script entry to \/Users\/apmaricich\/.config\/repo\/config.json mapping repo push command to bash \/Users\/apmaricich\/.config\/repo\/scripts\/push.sh with description Push current branch to origin.",
+      "tags" : [
+        "#push"
+      ],
+      "createdDate" : 1794594289.5791759,
+      "completedDate" : 1794594880.4912581,
+      "id" : 10
     }
-  ]
+  ],
+  "config" : {
+    "showCompleted" : "false",
+    "lists" : [
+      "backlogTags",
+      "pinTags",
+      "command"
+    ],
+    "sort" : "completed",
+    "tagDisplayLimit" : 0
+  }
 }
