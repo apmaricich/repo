@@ -9,6 +9,7 @@ A CLI tool that launches configured scripts via subcommands. Perfect for wrappin
 - **Template Arguments**: Pass arguments to scripts using `{arg}` placeholders
 - **Built-in Commands**: `init`, `all`, `gh` — common dev workflows out of the box
 - **Task Integration**: Works with [task](https://github.com/apmaricich/task) for project management
+- **Dashboard Integration**: Creates [dashboard](https://github.com/apmaricich/dashboard) configuration for project monitoring
 
 ## Build
 
@@ -42,11 +43,11 @@ This creates a `repo` binary in the current directory.
 ## Built-in Commands
 
 ### `repo init`
-Initialize a new project with git, task manager, and .gitignore:
+Initialize a new project with git, task manager, dashboard config, and .gitignore:
 ```bash
 repo init
 ```
-Requires [task](https://github.com/apmaricich/task) installed for task manager initialization.
+Requires [task](https://github.com/apmaricich/task) installed for task manager initialization. Creates a `dashboard.yaml` configuration file for use with the [dashboard](https://github.com/apmaricich/dashboard) project management app.
 
 ### `repo all`
 Run a command in all git repositories within subdirectories:
