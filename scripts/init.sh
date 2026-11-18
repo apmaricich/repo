@@ -17,6 +17,14 @@ else
     echo ".gitignore already exists."
 fi
 
+# Create dashboard.yaml if not already present
+if [ ! -f "dashboard.yaml" ]; then
+    echo "Creating dashboard.yaml..."
+    cp /Users/apmaricich/Code/repo/templates/dashboard.yaml dashboard.yaml
+else
+    echo "dashboard.yaml already exists."
+fi
+
 # Initialize task manager if not already initialized
 if [ ! -f "tasks.json" ]; then
     echo "Initializing task manager..."
